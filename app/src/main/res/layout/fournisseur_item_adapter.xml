@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:orientation="vertical"
+    android:padding="1dip">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/fournisseur_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        app:cardBackgroundColor="@color/white"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fournisseur_item_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="afterDescendants"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/fournisseur_header_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="@+id/fournisseur_item_container"
+                app:layout_constraintTop_toTopOf="@+id/fournisseur_item_container"
+                card_view:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/fournisseur_picto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintStart_toStartOf="@+id/fournisseur_header_container"
+                    app:layout_constraintTop_toTopOf="@+id/fournisseur_header_container"
+                    app:srcCompat="@drawable/ic_fournisseur"
+                    app:tint="@color/orange_500" />
+
+                <TextView
+                    android:id="@+id/fournisseur_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CATEGORY ID : %s"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/orange_500"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/fournisseur_header_container"
+                    app:layout_constraintStart_toEndOf="@id/fournisseur_picto"
+                    app:layout_constraintTop_toTopOf="@+id/fournisseur_header_container" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@+id/fournisseur_header_container"
+                card_view:layout_constraintStart_toStartOf="@+id/fournisseur_item_container"
+                card_view:layout_constraintTop_toBottomOf="@id/fournisseur_header_container" />
+
+            <ImageView
+                android:id="@+id/fournisseurRowOnePrefixIcon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/line"
+                app:layout_constraintTop_toBottomOf="@id/line"
+                app:srcCompat="@drawable/ic_sub_right_arrow" />
+
+            <TextView
+                android:id="@+id/fournisseur_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:maxWidth="267dp"
+                android:text="fournisseur 1"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                app:layout_constraintEnd_toEndOf="@+id/line"
+                app:layout_constraintStart_toEndOf="@id/fournisseurRowOnePrefixIcon"
+                app:layout_constraintTop_toBottomOf="@id/line" />
+
+
+            <ImageView
+                android:id="@+id/fournisseurRowTwoPrefixIcon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/line"
+                app:layout_constraintTop_toBottomOf="@id/fournisseurRowOnePrefixIcon"
+                app:srcCompat="@drawable/ic_sub_right_arrow" />
+
+            <TextView
+                android:id="@+id/fournisseur_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:focusable="false"
+                android:inputType="textMultiLine"
+                android:maxWidth="267dp"
+                android:scrollbars="vertical"
+                android:text="description one"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                app:layout_constraintEnd_toEndOf="@+id/line"
+                app:layout_constraintStart_toEndOf="@id/fournisseurRowTwoPrefixIcon"
+                app:layout_constraintTop_toBottomOf="@id/fournisseur_name" />
+
+            <ImageView
+                android:id="@+id/fournisseurRowThreePrefixIcon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/line"
+                app:layout_constraintTop_toBottomOf="@id/fournisseurRowTwoPrefixIcon"
+                app:srcCompat="@drawable/ic_sub_right_arrow" />
+
+            <TextView
+                android:id="@+id/fournisseur_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:focusable="false"
+                android:inputType="textMultiLine"
+                android:maxWidth="267dp"
+                android:scrollbars="vertical"
+                android:text="description one"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                app:layout_constraintEnd_toEndOf="@+id/line"
+                app:layout_constraintStart_toEndOf="@id/fournisseurRowThreePrefixIcon"
+                app:layout_constraintTop_toBottomOf="@id/fournisseur_email" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fournisseur_item_view_button"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/orange_700"
+                android:drawableTop="@drawable/ic_view"
+                android:minWidth="15dp"
+                android:text="VIEW"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                app:icon="@drawable/ic_view"
+                app:iconGravity="textStart"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fournisseur_phone" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

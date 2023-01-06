@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.HomeFragment">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/homeMainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="73dp"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Space
+                android:id="@+id/spaceAtStart"
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:id="@+id/appPrezLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/spaceAtStart"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/welcome_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="@string/welcome_message"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="280dp"
+                    android:layout_height="280dp"
+                    android:contentDescription="@string/todo"
+                    android:layout_marginTop="20dp"
+                    app:srcCompat="@drawable/store_banner" />
+
+                <TextView
+                    android:id="@+id/rnp_auth_ref_app_developped_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textAlignment="center"
+                    android:text="@string/app_developped_message"
+                    tools:ignore="MissingConstraints" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rnpAuthRefAppDevelopperLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:gravity="bottom"
+                android:textSize="45sp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/appPrezLinearLayout"
+                app:layout_constraintTop_toBottomOf="@id/appPrezLinearLayout"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/rnp_auth_ref_app_developper_copyright_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="@string/app_developper_copyright_message"
+                    tools:ignore="MissingConstraints" />
+
+            </LinearLayout>
+
+            <Space
+                android:id="@+id/spaceAfterRnpAuthRefAppDevelopperLayout"
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                app:layout_constraintTop_toBottomOf="@id/rnpAuthRefAppDevelopperLayout"
+                tools:ignore="MissingConstraints" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

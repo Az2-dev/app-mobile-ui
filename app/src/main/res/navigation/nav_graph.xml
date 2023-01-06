@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ma.emi.store.ui.fragment.HomeFragment"
+        android:label="@string/home_fragment_label"
+        tools:layout="@layout/fragment_home">
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="ma.emi.store.ui.fragment.CategoryFragment"
+        android:label="@string/category_fragment_label"
+        tools:layout="@layout/fragment_category">
+    </fragment>
+
+    <fragment
+        android:id="@+id/fournisseurFragment"
+        android:name="ma.emi.store.ui.fragment.FournisseurFragment"
+        android:label="@string/provider_fragment_label"
+        tools:layout="@layout/fragment_fournisseur">
+    </fragment>
+
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="ma.emi.store.ui.fragment.ProductFragment"
+        android:label="@string/provider_fragment_label"
+        tools:layout="@layout/fragment_product">
+    </fragment>
+
+</navigation>
